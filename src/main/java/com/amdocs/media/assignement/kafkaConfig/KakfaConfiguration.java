@@ -14,7 +14,7 @@ import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 
-import com.amdocs.media.assignement.dao.UserProfile;
+import com.amdocs.media.assignement.model.UserProfile;
 
 @EnableKafka
 @Configuration
