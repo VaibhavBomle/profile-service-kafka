@@ -1,16 +1,28 @@
 package com.amdocs.media.assignement.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.amdocs.media.assignement.dao.UserProfileRepository;
 import com.amdocs.media.assignement.model.UserProfile;
 
 @Service
 public class UserProfileServiceImpl implements UserProfileService {
 
+	@Autowired
+	private UserProfileRepository userProfileRepository;
+	
 	@Override
 	public UserProfile createUserProfile(UserProfile userProfile) {
-		// TODO Auto-generated method stub
-		return null;
+		return userProfileRepository.save(userProfile);
+	}
+
+	@Override
+	public UserProfile getUserProfile(Long id, Long userCredId) {
+		if(id != null) {
+			return userProfileRepository.getById(userCredId);
+		}
+		return userProfileRepository.getByUserCredId(userCredId);
 	}
 
 }

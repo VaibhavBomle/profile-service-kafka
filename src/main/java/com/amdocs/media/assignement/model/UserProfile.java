@@ -17,6 +17,8 @@ public class UserProfile {
 	private String address;
 
 	private String phoneNumber;
+	
+	private Long userCredId;
 
 	public UserProfile() {
 		super();
@@ -52,5 +54,15 @@ public class UserProfile {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+
+	public Long getUserCredId() {
+		return userCredId;
+	}
+
+	public void setUserCredId(Long userCredId) {
+		this.userCredId = userCredId;
+	}
+	
+	
 
 }

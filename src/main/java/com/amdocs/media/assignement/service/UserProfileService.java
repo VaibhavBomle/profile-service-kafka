@@ -10,5 +10,7 @@ import com.amdocs.media.assignement.model.UserProfile;
 public interface UserProfileService {
 	
 	public UserProfile createUserProfile(UserProfile userProfile);
+	
+	public UserProfile getUserProfile(Long id,Long userCredId);
 
 }

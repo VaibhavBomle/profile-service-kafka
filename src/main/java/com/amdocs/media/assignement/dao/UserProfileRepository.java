@@ -12,5 +12,9 @@ import com.amdocs.media.assignement.model.UserProfile;
  */
 @Repository
 public interface UserProfileRepository extends JpaRepository<UserProfile, Long> {
+	
+	UserProfile getById(Long id);
+	
+	UserProfile getByUserCredId(Long id);
 
 }
