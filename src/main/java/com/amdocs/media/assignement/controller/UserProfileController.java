@@ -19,17 +19,16 @@ public class UserProfileController {
 
 	@Autowired
 	private UserProfileService userProfileService;
-	
-	@PostMapping("/userProfile")
-	public ResponseEntity<?> getUserProfile(@RequestBody UserProfile userProfile){
-		
-		System.out.println("userProfile profile service "+userProfile);
+
+	@PostMapping("/user-profile")
+	public ResponseEntity<?> getUserProfile(@RequestBody UserProfile userProfile) {
 		return ResponseEntity.ok(userProfileService.createUserProfile(userProfile));
 	}
-	@GetMapping("/userProfile")
-	public ResponseEntity<?> getUserProfile(@RequestParam(value = "id",required = false) Long id,@RequestParam(value = "userCredId",required = false) Long userCredId){
-		return null;
+
+	@GetMapping("/user-profile")
+	public ResponseEntity<?> getUserProfile(@RequestParam(value = "id", required = false) Long id,
+			@RequestParam(value = "userCredId", required = false) Long userCredId) {
+		return ResponseEntity.ok(userProfileService.getUserProfile(id, userCredId));
 	}
-	
-	
+
 }

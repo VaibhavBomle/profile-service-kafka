@@ -17,7 +17,7 @@ public class UserProfile {
 	private String address;
 
 	private String phoneNumber;
-	
+
 	private Long userCredId;
 
 	public UserProfile() {
@@ -62,7 +62,11 @@ public class UserProfile {
 	public void setUserCredId(Long userCredId) {
 		this.userCredId = userCredId;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "UserProfile [id=" + id + ", address=" + address + ", phoneNumber=" + phoneNumber + ", userCredId="
+				+ userCredId + "]";
+	}
 
 }
